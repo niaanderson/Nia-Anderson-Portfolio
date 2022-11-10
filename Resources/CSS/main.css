@@ -1,0 +1,211 @@
+/*Default Stylesheet*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+*{
+   font-family: 'Lato', sans-serif;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+ 
+h1, h2, h3, h4, h5, h6, span{
+   color: #242424;
+   text-align: center;
+   line-height: 1.25;
+}
+
+hi{
+    font-size: 36px;
+}
+ 
+p{
+   line-height: 1.5;
+   font-size: 16px;
+}
+
+li{
+    list-style-type: none; /*removes bullet points from list*/
+}
+
+.flex{
+    display: flex; /*makes child also 100% of the height? don't fully understand yet*/
+}
+
+.flex-1{
+    flex: 1; /*makes div the entire height? still cofused*/
+}
+
+.container{
+    padding: 50px 0;
+}
+
+.row{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /*centers the items to enter of page*/
+}
+
+.text--purple{
+    color: #6030b1;
+}
+
+section:nth-child(even){
+    background-color: #f8f8f8; /*makes every second sectionis going to be a grey color*/
+}
+
+.section__title{
+    margin-bottom: 20px;
+} /*notice this doesnt work*/
+
+/* Navigation Bar */
+
+nav {
+    height: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; /*centers it*/
+    display: flex;
+    justify-content: space-between; /*centers elements to both sides of page*/
+    align-items: center; /*centers items vertically*/
+}
+
+.nav__link--list{
+    display: flex; /*see links side by side*/
+}
+
+.nav__link--anchor{
+    margin: 0 12px; /*top-bottom right-left*/
+    color: #242424;
+    text-decoration: none; /*Q:what does that do?*/
+    font-weight: 700;
+}
+
+.nav__link--anchor-primary{
+    background-color: #6030b1;
+    padding: 8px 20px;
+    border-radius: 50px; /*rounds the edges of the cotact button*/
+    color: white;
+    transition: all 300ms ease; /*styling makes the hover effect transition more smoothly rather than instantly*/
+}
+
+.nav__link--anchor-primary:hover{
+    background-color: #5d3eff;
+}
+
+.personal__logo{
+    font-size: 24px;
+    color:#6030b1;
+    margin: 0 12px;
+    font-weight: bold; /*I aint know you can do that from here.*/
+}
+
+/* About Me */
+
+#about-me{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me__info{
+    display: flex;
+    flex-direction: column;
+} /*notice this doesnt work*/
+
+.about-me__info--container{
+    display: flex;
+    flex-direction: column; /*so elements aren't side by side but stacked*/
+    align-items: center; /*centers iteams horizontally*/
+    /*i see this three styling combo alot but can't explain it yet*/
+    max-width: 600px;
+    margin: 0 auto; /*centers elements after adding max-width*/
+    text-align: center; /*enters the text of all the container's children*/
+}
+
+.about-me__picture--mask{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16); /*8px is pushing the shadow down the 16px is blurring the shadow*/ /*I like this styling feature. Subtle but adds all the difference with that dimension*/
+    margin-bottom: 28px; /*reates a gap in between picture ad text*/
+}
+
+.about-me__picture{
+    width: 100%; /*makes the width 100% of its parent*/
+}
+
+.about-me__info--title{
+    margin-bottom: 16px;
+}
+
+.about-me__info--para{
+    font-size: 20px;
+    margin-bottom: 28px; /*its nice to know I can do this. I was trying to add space in between elemnts and didnt know exactly how besides positioning*/ 
+}
+
+.about-me__link{
+    font-size: 20px;
+    color:#242424;
+    text-decoration: none; /*gets rid of the default uderlines*/
+    padding: 0 16px; /*adds space between the icons*/
+}
+
+.about-me__img--container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+} /*notice this doesnt work*/
+
+.about-me__img{
+    width: 100%;
+}
+
+/* TECH STACK */
+
+.language__img{
+    width: 100%;
+    max-width: 100px; /*is max width for when the vh changes to be bigger?*/
+    transition: all 300ms; /*makes the element transition in 300 milliseconds*/ 
+}
+
+.language__img:hover{
+    filter: brightness(80%); /*Ive never seen this before but its cool*/
+    opacity: 0.86;
+    transform: scale(0.9); /*makes the element look smaller*/
+}
+
+.language{
+    width: 25%;
+}
+
+.language__img--wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+}
+
+.language__list{
+    display: flex; /*unstaks images vertically and stacks them horizontally*/
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.language__name{
+    position: absolute;
+}
+
+
+
+
+
+/*Tablet Stylesheet*/
+@media (max-width: 1023px){
+ 
+}
+/*Mobile Stylesheet*/
+@media (max-width: 560px){
+ 
+}
+
+/*change color scheme, add javascript andpython to technology stack*/
